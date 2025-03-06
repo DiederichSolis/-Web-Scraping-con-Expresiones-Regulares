@@ -3,13 +3,13 @@ import re
 import csv
 
 
-# Función para leer el contenido de una página web desde un archivo local
+#  leer el contenido de una página web desde un archivo local
 def leerPaginaWebConBuffer(archivoPagina, tamanoBuffer=1024):
     contenido = ""
     with open(archivoPagina, "r", encoding="utf-8") as archivo:
         while True:
             bloque = archivo.read(tamanoBuffer)
-            if not bloque:  # Centinela: cuando no haya más datos
+            if not bloque: 
                 break
             contenido += bloque
     return contenido
@@ -31,10 +31,10 @@ def guardarEnCsv(datosProductos, nombreArchivo):
         manejadorCsv = csv.writer(archivoCsv)
         # Encabezados del archivo CSV
         manejadorCsv.writerow(["Nombre del Producto", "URL de la Imagen"])
-        manejadorCsv.writerows(datosProductos)  # Datos de productos
+        manejadorCsv.writerows(datosProductos)  
 
 
-# Inicia el proceso de carga, análisis y guardado
+# Inicia el proceso de carga
 contenidoPagina = leerPaginaWebConBuffer("pagina.html")
 productosEncontrados = analizarHtmlYExtraerDatos(contenidoPagina)
 guardarEnCsv(productosEncontrados, "listadoProductos.csv")
