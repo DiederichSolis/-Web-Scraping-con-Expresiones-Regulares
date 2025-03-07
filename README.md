@@ -2,6 +2,10 @@
 
 Este proyecto realiza scraping en páginas web para extraer nombres de productos e imágenes mediante expresiones regulares, buffers y centinelas.
 
+## Video Explicativo
+https://www.youtube.com/watch?v=HcMVG06O0F0
+
+
 ## 📌 Objetivo
 
 Automatizar la extracción de productos de una tienda en línea o de videojuegos, generando un archivo exportable con los nombres y URLs de las imágenes.
